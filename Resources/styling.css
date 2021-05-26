@@ -6,8 +6,8 @@ body {
 
 h1 {
     
-    font-weight: lighter;
-    margin: 0;
+    font-weight: normal;
+    margin: 0 0;
     padding: 0;
     font-size: 40px;
 }
@@ -15,9 +15,7 @@ h1 {
 h2 {
     font-weight: 500;
     color: rgb(83, 99, 124);
-    margin-top: -10px;
-    margin-left: 2px;
-    margin-bottom: 0px;
+    margin: 0 2px;
     padding: 0;
     font-size: 18px;
 }
