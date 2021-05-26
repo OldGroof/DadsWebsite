@@ -14,7 +14,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #53637C;
+    background-color: rgb(83, 99, 124);
     border-radius: 0.3em;
 }
 
@@ -80,7 +80,7 @@ input {
     height: 35px;
     width: 100%;
     border: none;
-    border-bottom: 1px solid #53637C;
+    border-bottom: 1px solid rgb(83, 99, 124);
     text-align: left;
     background: none;
     margin: 5px 0;
@@ -94,7 +94,7 @@ textarea {
     width: 100%;
     display: block;
     border: none;
-    border-bottom: 1px solid #53637C;
+    border-bottom: 1px solid rgb(83, 99, 124);
     text-align: left;
     background: none;
     margin: 5px 0;
@@ -111,7 +111,7 @@ button {
     width: 25%;
     border: none;
     border-radius: 0;
-    background-color: #53637C;
+    background-color: rgb(83, 99, 124);
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
