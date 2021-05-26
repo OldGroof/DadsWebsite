@@ -51,6 +51,15 @@ img {
     box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+a:link {
+    color: #53637C;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
 .img1 {
     background-image: url("img2bw.png");
     min-height: 400px; 
