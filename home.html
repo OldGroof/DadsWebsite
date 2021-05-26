@@ -40,29 +40,45 @@
 
 	var form = {
 		from_name: "",
+        company_name: "",
 		reply_to: "",
 		message: ""
 	}
 
 	function updateForm() {
 		form.from_name = document.getElementById("from_name").value
-
-		console.log(form.from_name)
+        form.company_name = document.getElementById("company_name").value
+        form.reply_to = document.getElementById("reply_to").value
+        form.message = document.getElementById("message").value
 	}
 
+    function sendEmail() {
+        emailjs.send('service_woecwy7', 'template_qtgsaec', form)
+        .then(function() {
+            console.log('SUCCESS!')
+        }, function(error) {
+            console.log('FAILED...', error)
+        })
+
+        form.from_name = ""
+        form.company_name = ""
+		form.reply_to = ""
+		form.message = ""
+
+        document.getElementById("from_name").value = ""
+        document.getElementById("company_name").value = ""
+        document.getElementById("reply_to").value = ""
+        document.getElementById("message").value = ""
+
+        alert("Thanks for your enquiry.")
+    }
+
 	document.getElementById("from_name").addEventListener("keyup", updateForm)
-        document.getElementById('submit').addEventListener('click', function(event) {
-            event.preventDefault();
-            // generate a five digit number for the contact_number variable
-            // this.contact_number.value = Math.random() * 100000 | 0;
-            // these IDs from the previous steps
-            emailjs.sendForm('service_woecwy7', 'template_qtgsaec', form)
-                .then(function() {
-                    console.log('SUCCESS!');
-                }, function(error) {
-                    console.log('FAILED...', error);
-                });
-        });
+    document.getElementById("company_name").addEventListener("keyup", updateForm)
+    document.getElementById("reply_to").addEventListener("keyup", updateForm)
+    document.getElementById("message").addEventListener("keyup", updateForm)
+
+    document.getElementById("submit").addEventListener("click", sendEmail)
     }
 </script>
 
@@ -180,7 +196,10 @@
                 <div class="column">
                     <h4>Enquiry Form</h4>
                     <form id="contact-form">
-                        <input type="text" id="from_name" class="input" required placeholder="Name"/>
+                        <div style="display: flex;">
+                            <input type="text" id="from_name" class="input" style="width: 50%; margin-right: 5px;" required placeholder="Name"/>
+                            <input type="text" id="company_name" class="input" style="width: 50%; margin-left: 5px;" required placeholder="Company Name"/>
+                        </div>
                         <input type="email" id="reply_to" class="input" required placeholder="Email"/>
                         <textarea id="message" rows="4" placeholder="Message"></textarea>
                         <button id="submit" type="button" value="Send">Submit</button>
