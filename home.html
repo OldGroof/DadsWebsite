@@ -27,6 +27,45 @@
 <link rel="stylesheet" href="Resources/styling.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/integration
+        emailjs.init('user_ga6QtIqCATAjFPYcouSbF');
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+
+	var form = {
+		from_name: "",
+		reply_to: "",
+		message: ""
+	}
+
+	function updateForm() {
+		form.from_name = document.getElementById("from_name").value
+
+		console.log(form.from_name)
+	}
+
+	document.getElementById("from_name").addEventListener("keyup", updateForm)
+        document.getElementById('submit').addEventListener('click', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            // this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('service_woecwy7', 'template_qtgsaec', form)
+                .then(function() {
+                    console.log('SUCCESS!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+</script>
+
 <body>
     <div class="header">
         <h1>FINANCE FOR INTERNATIONAL TRADE LTD</h1>
@@ -125,15 +164,28 @@
         <h3>Contact</h3>
         <div style="padding: 0 15px;">
             <div class="row">
-                <div>
-                    <img src="Resources/profilebw.png">
+                <div class="column">
+                    <div class="row">
+                        <div>
+                            <img src="Resources/profilebw.png">
+                        </div>
+                        <div style="padding-left: 15px; margin-right: auto;">
+                            <h4>Ray Webb</h4>
+                            <p>Finance for International Trade Ltd.</p>
+                            <p style="padding: 0;"> Mobile: +44 (0)7836 526594</p>
+                            <p>Email: <a href="mailto:ray@webbscom.co.uk?subject=Finance For International Trade Enquiry">ray@webbscom.co.uk</a></p>
+                        </div>
+                    </div>
                 </div>
-                <div style="padding-left: 15px; margin-right: auto;">
-                    <h4>Ray Webb</h4>
-                    <p>Finance for International Trade Ltd.</p>
-                    <p style="padding: 0;"> Mobile: +44 (0)7836 526594</p>
-                    <p>Email: <a href="mailto:ray@webbscom.co.uk?subject=Finance For International Trade Enquiry">ray@webbscom.co.uk</a></p>
-                                    </div>
+                <div class="column">
+                    <h4>Enquiry Form</h4>
+                    <form id="contact-form">
+                        <input type="text" id="from_name" class="input" required placeholder="Name"/>
+                        <input type="email" id="reply_to" class="input" required placeholder="Email"/>
+                        <textarea id="message" rows="4" placeholder="Message"></textarea>
+                        <button id="submit" type="button" value="Send">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
