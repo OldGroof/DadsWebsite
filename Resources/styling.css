@@ -150,6 +150,18 @@ button:hover {
     background-size: cover;
 }
 
+@media only screen and (max-device-width: 1366px) {
+    .img1 {
+      background-attachment: scroll;
+    }
+    .img2 {
+        background-attachment: scroll;
+    }
+    .img3 {
+        background-attachment: scroll;
+    }  
+  }
+
 .header {
     overflow: hidden;
     background-color: white;
