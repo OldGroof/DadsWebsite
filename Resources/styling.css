@@ -126,6 +126,7 @@ button:hover {
     min-height: 400px; 
     background-attachment: fixed;
     background-position: center;
+    position: fixed !important;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -136,6 +137,7 @@ button:hover {
     min-height: 600px; 
     background-attachment: fixed;
     background-position: center;
+    position: fixed !important;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -146,6 +148,7 @@ button:hover {
     min-height: 400px; 
     background-attachment: fixed;
     background-position: center;
+    position: fixed !important;
     background-repeat: no-repeat;
     background-size: cover;
 }
