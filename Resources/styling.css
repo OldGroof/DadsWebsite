@@ -127,6 +127,7 @@ button:hover {
     background-attachment: fixed;
     background-position: center;
     position: fixed !important;
+    z-index: -2;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -138,6 +139,7 @@ button:hover {
     background-attachment: fixed;
     background-position: center;
     position: fixed !important;
+    z-index: -2;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -149,6 +151,7 @@ button:hover {
     background-attachment: fixed;
     background-position: center;
     position: fixed !important;
+    z-index: -2;
     background-repeat: no-repeat;
     background-size: cover;
 }
