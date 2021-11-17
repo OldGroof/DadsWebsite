@@ -156,18 +156,24 @@ button:hover {
         -webkit-background-size: auto;
         height: 400px !important; 
         background-attachment: scroll;
+        background-position: top;
+        background-size: auto;
     }
     .img2 {
         -moz-background-size: auto;
         -webkit-background-size: auto;
         height: 600px !important; 
         background-attachment: scroll;
+        background-position: top;
+        background-size: auto;
     }
     .img3 {
         -moz-background-size: auto;
         -webkit-background-size: auto;
         height: 400px !important; 
         background-attachment: scroll;
+        background-position: top;
+        background-size: auto;
     }  
   }
 
