@@ -152,12 +152,21 @@ button:hover {
 
 @media only screen and (max-device-width: 1366px) {
     .img1 {
-      background-attachment: scroll;
+        position: sticky;
+        top: 0;
+        z-index: 0;
+        background-attachment: scroll;
     }
     .img2 {
+        position: sticky;
+        top: 0;
+        z-index: 0;
         background-attachment: scroll;
     }
     .img3 {
+        position: sticky;
+        top: 0;
+        z-index: 0;
         background-attachment: scroll;
     }  
   }
