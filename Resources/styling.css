@@ -152,28 +152,28 @@ button:hover {
 
 @media only screen and (max-device-width: 1366px) {
     .img1 {
-        -moz-background-size: auto;
-        -webkit-background-size: auto;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
         height: 400px !important; 
         background-attachment: scroll;
         background-position: top;
-        background-size: auto;
+        background-size: cover;
     }
     .img2 {
-        -moz-background-size: auto;
-        -webkit-background-size: auto;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
         height: 600px !important; 
         background-attachment: scroll;
         background-position: top;
-        background-size: auto;
+        background-size: cover;
     }
     .img3 {
-        -moz-background-size: auto;
-        -webkit-background-size: auto;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
         height: 400px !important; 
         background-attachment: scroll;
         background-position: top;
-        background-size: auto;
+        background-size: cover;
     }  
   }
 
